@@ -1,0 +1,119 @@
+# JMH version: 1.25
+# VM version: JDK 11.0.10, OpenJDK 64-Bit Server VM, 11.0.10+9-LTS
+# VM options: -Xms1G -Xmx4G
+# Warmup: 3 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.woodock.ImpracticalComparePerformance.iterativeSum
+
+# Run progress: 0.00% complete, ETA 00:04:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 1260.919 ms/op
+# Warmup Iteration   2: 1244.070 ms/op
+# Warmup Iteration   3: 1215.834 ms/op
+Iteration   1: 1234.833 ms/op
+Iteration   2: 1229.620 ms/op
+Iteration   3: 1238.734 ms/op
+
+
+Result "com.woodock.ImpracticalComparePerformance.iterativeSum":
+  1234.395 ±(99.9%) 83.427 ms/op [Average]
+  (min, avg, max) = (1229.620, 1234.395, 1238.734), stdev = 4.573
+  CI (99.9%): [1150.969, 1317.822] (assumes normal distribution)
+
+
+# JMH version: 1.25
+# VM version: JDK 11.0.10, OpenJDK 64-Bit Server VM, 11.0.10+9-LTS
+# VM options: -Xms1G -Xmx4G
+# Warmup: 3 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.woodock.ImpracticalComparePerformance.parallelRangedSum
+
+# Run progress: 25.00% complete, ETA 00:03:18
+# Fork: 1 of 1
+# Warmup Iteration   1: 93.871 ms/op
+# Warmup Iteration   2: 93.513 ms/op
+# Warmup Iteration   3: 93.026 ms/op
+Iteration   1: 94.376 ms/op
+Iteration   2: 93.521 ms/op
+Iteration   3: 92.028 ms/op
+
+
+Result "com.woodock.ImpracticalComparePerformance.parallelRangedSum":
+  93.308 ±(99.9%) 21.682 ms/op [Average]
+  (min, avg, max) = (92.028, 93.308, 94.376), stdev = 1.188
+  CI (99.9%): [71.626, 114.990] (assumes normal distribution)
+
+
+# JMH version: 1.25
+# VM version: JDK 11.0.10, OpenJDK 64-Bit Server VM, 11.0.10+9-LTS
+# VM options: -Xms1G -Xmx4G
+# Warmup: 3 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.woodock.ImpracticalComparePerformance.parallelSum
+
+# Run progress: 50.00% complete, ETA 00:02:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 92.675 ms/op
+# Warmup Iteration   2: 90.924 ms/op
+# Warmup Iteration   3: 91.803 ms/op
+Iteration   1: 92.632 ms/op
+Iteration   2: 90.569 ms/op
+Iteration   3: 92.192 ms/op
+
+
+Result "com.woodock.ImpracticalComparePerformance.parallelSum":
+  91.798 ±(99.9%) 19.819 ms/op [Average]
+  (min, avg, max) = (90.569, 91.798, 92.632), stdev = 1.086
+  CI (99.9%): [71.979, 111.617] (assumes normal distribution)
+
+
+# JMH version: 1.25
+# VM version: JDK 11.0.10, OpenJDK 64-Bit Server VM, 11.0.10+9-LTS
+# VM options: -Xms1G -Xmx4G
+# Warmup: 3 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.woodock.ImpracticalComparePerformance.sequentialSum
+
+# Run progress: 75.00% complete, ETA 00:01:02
+# Fork: 1 of 1
+# Warmup Iteration   1: 1255.072 ms/op
+# Warmup Iteration   2: 1227.254 ms/op
+# Warmup Iteration   3: 1247.214 ms/op
+Iteration   1: 1231.105 ms/op
+Iteration   2: 1225.544 ms/op
+Iteration   3: 1227.866 ms/op
+
+
+Result "com.woodock.ImpracticalComparePerformance.sequentialSum":
+  1228.172 ±(99.9%) 50.956 ms/op [Average]
+  (min, avg, max) = (1225.544, 1228.172, 1231.105), stdev = 2.793
+  CI (99.9%): [1177.216, 1279.129] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:04:13
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                        Mode  Cnt     Score    Error  Units
+ImpracticalComparePerformance.iterativeSum       avgt    3  1234.395 ± 83.427  ms/op
+ImpracticalComparePerformance.parallelRangedSum  avgt    3    93.308 ± 21.682  ms/op
+ImpracticalComparePerformance.parallelSum        avgt    3    91.798 ± 19.819  ms/op
+ImpracticalComparePerformance.sequentialSum      avgt    3  1228.172 ± 50.956  ms/op
+
+Process finished with exit code 0
